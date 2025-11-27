@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos/style1.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Feliz Um ano meu amor &#x2764</h1> 
+    </header>
+    <main>
+        <p>Um ano de nós. <br>
+Passou tão rápido que realmente nem parece tanto… <br>
+Talvez porque cada momento com você tenha sido leve, verdadeiro e cheio de sentido.<br>
+Você me apresentou tantas coisas novas, tantos sentimentos que eu nem imaginava sentir.<br>
+Com você eu descobri uma forma diferente de enxergar o mundo, de viver o dia, de cuidar, de amar E, a cada dia que passa, eu me vejo te amando mais <br> 
+Não só pelo que você é, mas pelo que nós somos juntos. Por tudo o que vôce faz por mim, por tudo o que ainda vamos viver. Um ano passou num instante,<br>
+Mas cada instante ao seu lado valeu como uma eternidade boa. <br>
+Te amo meu Docinho de coco &#x2764</p>
+    </main>
+    <footer>
+        <div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="imagens/foto1.jpeg" alt="">
+        <img src="imagens/foto2.jpeg" alt="">
+        <img src="imagens/foto3.jpeg" alt="">
+        <img src="imagens/foto4.jpeg" alt="">
+        <img src="imagens/foto5.jpeg" alt="">
+        <img src="imagens/foto6.jpeg" alt="">
+        <img src="imagens/foto7.jpeg" alt="">
+        <img src="imagens/foto8.jpeg" alt="">
+        <img src="imagens/foto9.jpeg" alt="">
+        <img src="imagens/foto10.jpeg" alt="">
+        <img src="imagens/foto11.jpeg" alt="">
+        <img src="imagens/foto12.jpeg" alt="">
+        <img src="imagens/foto13.jpeg" alt="">
+        <img src="imagens/foto14.jpeg" alt="">
+        <img src="imagens/foto15.jpeg" alt="">
+        <img src="imagens/foto16.jpeg" alt="">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+    </footer>
+    <script>
+    const images = document.querySelector('.carousel-images');
+    const totalImages = images.querySelectorAll('img').length;
+
+    let index = 0;
+
+    function updateCarousel() {
+        const size = images.querySelector('img').clientWidth; 
+        images.style.transform = `translateX(${-index * size}px)`;
+    }
+
+    document.querySelector('.next').addEventListener('click', () => {
+        index = (index + 1) % totalImages;
+        updateCarousel();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        index = (index - 1 + totalImages) % totalImages;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+</script>
 </body>
 </html>

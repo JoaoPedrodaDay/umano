@@ -1,0 +1,94 @@
+@media (max-width: 400px) {
+
+}
+* {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: linear-gradient(to right, rgb(175, 9, 9),black,rgb(175, 9, 9));
+    
+}
+
+header {
+    background-color: white;
+    height: 25%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Courgette", cursive;
+}
+
+main {
+    background-color: white;
+    height: 200%;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px;
+    font-family: "Courgette", cursive;
+
+}
+
+.carousel {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform .4s ease-in-out;
+}
+
+.carousel img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.carousel button:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* Responsivo para Samsung A56 */
+@media (max-width: 400px) {
+    .carousel {
+        width: 250px;
+        height: 160px;
+    }
+
+    .carousel img {
+        width: 250px;
+        height: 160px;
+    }
+
+    .carousel button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
