@@ -1,10 +1,7 @@
 @media (max-width: 400px) {
 
 }
-* {
-    height: 100%;
-    width: 100%;
-}
+
 body {
     background-image: linear-gradient(to right, rgb(175, 9, 9),black,rgb(175, 9, 9));
     
@@ -13,7 +10,7 @@ body {
 header {
     background-color: white;
     height: 25%;
-    width: 80%;
+    width: 82%;
     margin: auto;
     text-align: center;
     font-size: 30px;
@@ -30,6 +27,16 @@ main {
     font-size: 30px;
     font-family: "Courgette", cursive;
 
+}
+
+footer {
+    background-color: white;
+    width: 78%;
+    height: 300px;
+    padding: 10px;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Courgette", cursive;
 }
 
 .carousel {
